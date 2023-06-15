@@ -6,7 +6,7 @@ from pandora_cloud.server import ChatBot
 
 _port = getenv('PORT')
 _proxy = getenv('PANDORA_PROXY')
-_apiprefix = getenv('CHATGPT_API_PREFIX', 'https://ai.fakeopen.com')
+_apiprefix = getenv('CHATGPT_API_PREFIX', 'https://pandora-chat-api.moeyy.cn')
 _debug = getenv('PANDORA_DEBUG', 'false').lower() == 'true'
 _sentry = getenv('PANDORA_SENTRY', 'false').lower() == 'true'
 _listen = getenv('PANDORA_SERVER_LISTEN', 'true').lower() == 'true'
