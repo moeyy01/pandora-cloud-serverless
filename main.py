@@ -10,5 +10,5 @@ _debug = getenv('PANDORA_DEBUG', 'false').lower() == 'true'
 _local = getenv('PANDORA_LOGIN_LOCAL', 'false').lower() == 'true'
 _listen = getenv('PANDORA_SERVER_LISTEN', 'true').lower() == 'true'
 _server = getenv('PANDORA_SERVER', '0.0.0.0:{}'.format(_port) if _port else '0.0.0.0')
-
-app = ChatBot(proxy=_proxy, debug=_debug, login_local=_local).run(_server, listen=_listen)
+_api_prefix = getenv('CHATGPT_API_PREFIX')
+app = ChatBot(proxy=_proxy, debug=_debug, login_local=_local).run(_server, listen=_listen, api_prefix=_api_prefix)
